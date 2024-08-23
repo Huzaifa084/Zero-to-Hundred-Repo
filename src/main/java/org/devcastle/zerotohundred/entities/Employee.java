@@ -3,8 +3,11 @@ package org.devcastle.zerotohundred.entities;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 import org.springframework.format.annotation.NumberFormat;
 
 import java.time.LocalDate;

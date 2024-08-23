@@ -9,8 +9,7 @@ import java.util.List;
 @Data
 @Builder
 public class ApiError {
-    private HttpStatus status;
+    private HttpStatus ErrorStatus;
     private String message;
-    private boolean operationCompleted = true;
     private List<String> subErrors;
 }

@@ -9,23 +9,26 @@ import java.time.LocalDateTime;
 @Data
 public class ApiResponse<T> {
 
-    @JsonFormat(pattern = "hh:mm:ss dd-MM-yyyy")
-    private LocalDateTime timeStamp;
+//    @JsonFormat(pattern = "hh:mm:ss dd-MM-yyyy")
+//    private LocalDateTime timeStamp;
     private T data;
     private ApiError error;
-    private boolean operationCompleted = true;
+    private boolean apiStatus;
 
-    public ApiResponse() {
-        this.timeStamp = LocalDateTime.now();
-    }
+
+//    public ApiResponse() {
+//        this.timeStamp = LocalDateTime.now();
+//    }
 
     public ApiResponse(T data) {
-        this();
+//        this();
         this.data = data;
+        this.apiStatus = true;
     }
 
     public ApiResponse(ApiError error) {
-        this();
+//        this();
         this.error = error;
+        this.apiStatus = false;
     }
 }
